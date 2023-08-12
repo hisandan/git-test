@@ -18,7 +18,9 @@ do
             git fetch
             git rebase
             git push
-            echo "Datos enviados!"
+            echo ""
+            echo "Datos enviados! <------------"
+            break
             ;;
 
         "Enviar todos los  cambios a repositorio colaborativo")
@@ -31,7 +33,9 @@ do
             git push
             gh repo set-default https://github.com/hisandan/git-test
             gh pr create --title "- $commit_msg" --body "-"
-            echo "Datos enviados!"
+            echo ""
+            echo "Datos enviados! <------------"
+            break
             ;;
         "Sincronizar / Sobreescribir con repo personal (Elimina tus cambios en el editor)")
             # git add . (No estoy seguro de que esto no afecte lo de adelante...)
@@ -39,7 +43,9 @@ do
             # git push --force
             git fetch origin
             git reset --hard origin/main
-            echo "Datos Actualizados!"
+            echo ""
+            echo "Datos Actualizados! <------------"
+            break
             ;;
         "Sincronizar / Sobreescribir con repositorio colaborativo (Elimina tus cambios en editor)")
             git add .
@@ -50,7 +56,9 @@ do
             git add .
             git commit -m "Estado actual Repositorio Colaborativo"
             git push --force
-            echo "Datos Actualizados!"
+            echo ""
+            echo "Datos Actualizados! <------------"
+            break
             ;;
         "Salir")
             break

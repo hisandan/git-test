@@ -69,8 +69,8 @@ do
     esac
 done
 
-rm rebase || true
-rm commit || true
-rm fetch || true
-rm pull || true
-rm push || true
+rm rebase > /dev/null 2>&1
+rm commit > /dev/null 2>&1
+rm fetch > /dev/null 2>&1
+rm pull > /dev/null 2>&1
+rm push > /dev/null 2>&1

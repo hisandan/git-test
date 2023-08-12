@@ -1,6 +1,6 @@
 
 #!/bin/bash
-# Bash Menu Script Example
+# Simplificando comandos de git
 
 PS3='Por favor ingresa la opción (número): '
 options=("Enviar todos los cambios a repositorio personal"\
@@ -33,14 +33,11 @@ do
             echo "Datos enviados!"
             ;;
         "Sincronizar / Sobreescribir con repo personal (Elimina tus cambios en el editor)")
-            # git add .
+            # git add . (No estoy seguro de que esto no afecte lo de adelante...)
             # git commit -m "backup antes de actualizar forzadamente con info del repositorio personal"
             # git push --force
-            git fetch upstream
-            git reset --hard upstream/main
-            git add .
-            git commit -m "Estado actual Repositorio Colaborativo"
-            git push --force
+            git fetch origin
+            git reset --hard origin/main
             echo "Datos Actualizados!"
             ;;
         "Sincronizar / Sobreescribir con repositorio colaborativo (Elimina tus cambios en editor)")

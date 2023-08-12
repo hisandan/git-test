@@ -8,8 +8,11 @@ options=("Enviar todos los cambios a repositorio personal"\
  "Sincronizar / Sobreescribir con repo personal (Elimina tus cambios en el editor)" \
  "Sincronizar / Sobreescribir con repositorio colaborativo (Elimina tus cambios en editor)" \
  "Salir")
+
+
 select opt in "${options[@]}"
 do
+    echo ""
     case $opt in
         "Enviar todos los cambios a repositorio personal")
             read -p "Escribe un mensaje corto descriptivo de los cambios: " commit_msg 

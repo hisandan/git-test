@@ -6,7 +6,7 @@ PS3='Por favor ingresa la opción (número): '
 options=("Enviar todos los cambios a repositorio personal"\
  "Enviar todos los  cambios a repositorio colaborativo" \
  "Sincronizar / Sobreescribir con repo personal (ELIMINA TUS CAMBIOS EN EL EDITOR!!)" \
- "Sincronizar / Sobreescribir con repositorio colaborativo (ELIMINA TUS CAMBIOS EN EL EDITOR!!)" \
+ "Sincronizar / Sobreescribir con repositorio colaborativo (ELIMINA TUS CAMBIOS EN EL REPOSITORIO PERSONAL!!)" \
  "Salir")
 
 
@@ -49,7 +49,7 @@ do
             echo "Datos Actualizados! <------------"
             break
             ;;
-        "Sincronizar / Sobreescribir con repositorio colaborativo (ELIMINA TUS CAMBIOS EN EL EDITOR!!)")
+        "Sincronizar / Sobreescribir con repositorio colaborativo (ELIMINA TUS CAMBIOS EN EL REPOSITORIO PERSONAL!!)")
             git add .
             git commit -m "backup antes de actualizar forzadamente con info del repositorio colaborativo"
             git push --force

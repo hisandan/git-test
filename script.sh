@@ -69,6 +69,7 @@ do
     esac
 done
 
+# lo siguiente se realiza debido a que se estaban creado archivos vacios al ejecutar las opciones anteriores
 rm rebase > /dev/null 2>&1
 rm commit > /dev/null 2>&1
 rm fetch > /dev/null 2>&1

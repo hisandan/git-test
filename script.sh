@@ -27,7 +27,6 @@ do
             ;;
 
         "Enviar todos los  cambios a repositorio colaborativo")
-        add -> commit -> fetch -> rebase -> push -> pull request
             read -p "Cual es el número de 'Issue' asociado a este envío?: " commit_msg 
             git add .
             git commit -m "- $commit_msg"

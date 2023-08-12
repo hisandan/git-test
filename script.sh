@@ -27,14 +27,14 @@ do
             ;;
 
         "Enviar todos los  cambios a repositorio colaborativo")
-            read -p "Cual es el número de 'Issue' asociado a este envío?: " commit_msg 
+            read -p "Cual es el número de 'Issue' asociado a este envío?: " issue 
             git add .
-            git commit -m "- $commit_msg"
+            git commit -m "Issue: $issue"
             git fetch
             git rebase
             git push
             gh repo set-default https://github.com/hisandan/git-test
-            gh pr create --title "- $commit_msg" --body "-"
+            gh pr create --title "Issue: $issue" --body "-"
             echo ""
             echo "Datos enviados! <------------"
             break

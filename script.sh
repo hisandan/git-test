@@ -35,7 +35,6 @@ do
             git push
             gh repo set-default https://github.com/hisandan/git-test
             gh pr create --title "- $commit_msg" --body "-"
-            rm rebase
             echo ""
             echo "Datos enviados! <------------"
             break
@@ -69,3 +68,9 @@ do
         *) echo "Opción invalida $REPLY";;
     esac
 done
+
+rm rebase
+rm commit
+rm fetch
+rm pull
+rm push

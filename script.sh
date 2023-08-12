@@ -29,7 +29,8 @@ do
             git fetch
             git rebase
             git push
-            git pull request????
+            gh repo set-default https://github.com/hisandan/git-test
+            gh pr create --title "- $commit_msg" --body "-"
             echo "Datos enviados!"
             ;;
         "Sincronizar / Sobreescribir con repo personal (Elimina tus cambios en el editor)")
@@ -54,6 +55,6 @@ do
         "Salir")
             break
             ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "Opción invalida $REPLY";;
     esac
 done

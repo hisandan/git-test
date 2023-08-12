@@ -35,6 +35,7 @@ do
             git push
             gh repo set-default https://github.com/hisandan/git-test
             gh pr create --title "- $commit_msg" --body "-"
+            rm rebase
             echo ""
             echo "Datos enviados! <------------"
             break
